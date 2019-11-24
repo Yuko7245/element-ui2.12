@@ -96,7 +96,6 @@ export default {
 
   data() {
     return {
-      index: 0,
       isShow: false,
       infinite: true,
       loading: false,
@@ -111,6 +110,10 @@ export default {
     };
   },
   computed: {
+    index() {
+      console.log('previewIndex:', this.previewIndex);
+      return this.previewIndex || 0;
+    },
     isSingle() {
       return this.urlList.length <= 1;
     },
@@ -138,11 +141,6 @@ export default {
     }
   },
   watch: {
-    previewIndex: {
-      handler: function(val) {
-        this.index = val || 0;
-      }
-    },
     index: {
       handler: function(val) {
         this.reset();
