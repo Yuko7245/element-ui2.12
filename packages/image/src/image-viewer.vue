@@ -88,7 +88,7 @@ export default {
       type: Function,
       default: () => {}
     },
-    index: {
+    previewIndex: {
       type: Number,
       default: 0
     }
@@ -96,6 +96,7 @@ export default {
 
   data() {
     return {
+      index: 0,
       isShow: false,
       infinite: true,
       loading: false,
@@ -137,6 +138,11 @@ export default {
     }
   },
   watch: {
+    previewIndex: {
+      handler: function(val) {
+        this.index = val || 0;
+      }
+    },
     index: {
       handler: function(val) {
         this.reset();
