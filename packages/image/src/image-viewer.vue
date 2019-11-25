@@ -298,6 +298,7 @@ export default {
   },
   mounted() {
     this.deviceSupportInstall();
+    console.log(this)
   }
 };
 </script>
