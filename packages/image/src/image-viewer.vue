@@ -35,6 +35,7 @@
       </div>
       <!-- CANVAS -->
       <div class="el-image-viewer__canvas">
+        {{previewIndex}}
         <img
           v-for="(url, i) in urlList"
           v-if="i === index"

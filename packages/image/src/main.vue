@@ -1,5 +1,6 @@
 <template>
   <div class="el-image">
+    {{previewIndex}}
     <slot v-if="loading" name="placeholder">
       <div class="el-image__placeholder"></div>
     </slot>
